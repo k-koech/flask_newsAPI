@@ -5,16 +5,18 @@
 <div class="container">
     <h2 class="m-2">Trending News</h2>
     {% for article in trending %}
-    <div class="row articles">
-        <div class="col col1">
-            <img src="{{ article.image }}" class="img-fluid" alt="...">
-        </div>
-        <div class="col col2">
-            <h5><a  href="/source/article/{{ article.title }}">{{ article.title }}</a></h5>
-            <p>{{ article.description }}</p>
-            <p class="date">{{ article.date_published }}</p>
-            <a type="button" href="/source/article/{{ article.title }}" class="btn btn-secondary float-right">Read the article</a>
+    <div class="col-md-8">
+        <div class="row articles">
+            <div class="col col1">
+                <img src="{{ article.image }}" class="img-fluid" alt="...">
+            </div>
+            <div class="col col2">
+                <h5><a  href="{{article.url }}">{{ article.title }}</a></h5>
+                <p>{{ article.description }}</p>
+                <p class="date">{{ article.date_published }}</p>
+                <a type="button" href="{{ article.url }}" class="btn btn-secondary float-right">Read the article</a>
 
+            </div>
         </div>
     </div>
     {% endfor %}

@@ -1,6 +1,11 @@
+.navbar i
+{
+  color: rgb(66, 114, 38);
+}
 .navbar-brand
 {
    margin-right: 10em !important;
+   font-weight: 1000;
 }
 #navbarNav
 {

@@ -27,9 +27,10 @@ def source(id):
     '''
     news_sources = get_sources()
     source_details = get_source(id)
-    title = 'Sources - '
+    title = 'Source - '+id
+    source = id.upper()
 
-    return render_template('source.html',sources = news_sources, source_details=source_details)
+    return render_template('source.html',sources = news_sources, source=source, source_details=source_details)
 
 
 @app.route('/source/article/<title>')

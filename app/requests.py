@@ -73,11 +73,11 @@ def get_article(id):
             title = article_data_response.get('title')
             description = article_data_response.get('description')
             image = article_data_response.get('urlToImage')
-            poster =  article_data_response.get('urlToImage') 
+            url =  article_data_response.get('url') 
             date_published = article_data_response.get('publishedAt')
             content = article_data_response.get('content')
 
-            article_object = Article(author,title,description,image,poster, date_published,content)
+            article_object = Article(author,title,description,image,url, date_published,content)
     return article_object 
 
 
@@ -98,11 +98,11 @@ def process_articles_results(articles_list):
         title = source_article.get('title')
         description = source_article.get('description')
         image = source_article.get('urlToImage')
-        poster =  source_article.get('urlToImage') 
+        url =  source_article.get('url') 
         date_published = source_article.get('publishedAt')
         content = source_article.get('content')
 
-        article_object =  Article(author,title,description,image,poster, date_published,content)
+        article_object =  Article(author,title,description,image,url, date_published,content)
         articles_results.append(article_object)
 
     return articles_results
