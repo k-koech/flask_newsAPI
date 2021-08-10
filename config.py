@@ -6,7 +6,7 @@ class Config:
     SPECIFIC_SOURCE = 'https://newsapi.org/v2/top-headlines?sources={}&apiKey={}'
     TOPHEADLINES_SOURCE = 'https://newsapi.org/v2/everything?q=bitcoin&apiKey={}'
     
-
+    MOVIE_API_KEY='271b6700bbff46808dcc9bbe2e093996'
 
 class ProdConfig(Config):
     '''
@@ -27,7 +27,7 @@ class DevConfig(Config):
     '''
 
     DEBUG = True
-    
+
 config_options = {
 'development':DevConfig,
 'production':ProdConfig
