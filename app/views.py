@@ -33,12 +33,9 @@ def source(id):
     return render_template('source.html',sources = news_sources, source=source, source_details=source_details)
 
 
-@app.route('/source/article/<title>')
-def article(title):
+@app.route('/404')
+def article():
     '''
     View source page function that returns the index page and its data
     '''
-    news_sources = get_sources()
-    search = title.replace(" ","%")
-    article_details = get_topheadlines(search)
-    return render_template('article.html',sources = news_sources,article_details = article_details)
+    return render_template('404.html')

@@ -9,7 +9,7 @@ api_key = app.config['NEWS_API_KEY']
 base_url = app.config["SOURCES_API_BASE_URL"]
 source_url = app.config["SPECIFIC_SOURCE"]
 topheadline_url = app.config["TOPHEADLINES_SOURCE"]
-q=""
+
 # TOP HEADLINES
 def get_topheadlines(search):
     url = 'https://newsapi.org/v2/everything?q={}&apiKey={}' 
@@ -30,9 +30,10 @@ def get_sources():
     '''
     Function that gets the json response to our url request
     '''
-    get_source_url = base_url.format(api_key)
+    base_url = "https://newsapi.org/v2/top-headlines/sources?apiKey={}"
+    get_sources_url = base_url.format(api_key)
 
-    with urllib.request.urlopen(get_source_url) as url:
+    with urllib.request.urlopen(get_sources_url) as url:
         get_sources_data = url.read()
         get_sources_response = json.loads(get_sources_data)
         print(get_sources_response)

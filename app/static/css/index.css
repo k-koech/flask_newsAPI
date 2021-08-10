@@ -4,18 +4,27 @@
 }
 .navbar-brand
 {
-   margin-right: 10em !important;
+   margin-right: 7em !important;
    font-weight: 1000;
 }
-#navbarNav
+#navbarNav 
 {
-    /* width: 10em;  */
-     /* overflow-x: hidden; */
+    width: 25em !important; 
+    justify-content:start !important;
+    overflow: hidden ; 
     white-space: nowrap;
 }
+
 #navbarNav a{
-    background-color: rgb(140, 140, 140) !important;
+    font-weight: 600;
     border-radius: 4px;
     margin-right: 5px;
     color: #fff;
+}
+.othersources a
+{
+    height:100vh;
+    overflow: scroll;
+    text-decoration: none;
+    color: rgb(77, 77, 77) !important;
 }

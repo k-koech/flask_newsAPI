@@ -4,8 +4,9 @@
 {% block content %}
 <div class="container">
     <h2 class="m-2">Trending News</h2>
-    {% for article in trending %}
+    <div class="row">
     <div class="col-md-8">
+        {% for article in trending %}
         <div class="row articles">
             <div class="col col1">
                 <img src="{{ article.image }}" class="img-fluid" alt="...">
@@ -15,11 +16,20 @@
                 <p>{{ article.description }}</p>
                 <p class="date">{{ article.date_published }}</p>
                 <a type="button" href="{{ article.url }}" class="btn btn-secondary float-right">Read the article</a>
-
             </div>
         </div>
+       {% endfor %}
     </div>
-    {% endfor %}
+    <div class="col-md-4 othersources">
+        <h5 class="fw-bold color-white">Other Sources</h5>
+        <ul class="list-group">
+        {% for source in sources %} 
+             <a class="list-group-item" href="/source/{{source.id}}"><i class="fa fa-arrow-right" aria-hidden="true"></i>              {{ source.name }}</a> 
+        {% endfor %}
+        </ul>
+    </div>
+    </div>
+    
   
 </div>
 {% endblock  %}

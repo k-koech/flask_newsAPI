@@ -8,15 +8,13 @@
       <li class="nav-item active">
         <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
       </li>
-      {% for source in sources %} 
-        {% if source!="Ynet" %}
-        <li class="nav-item active">
-          <a class="nav-link" href="/source/{{source.id}}">{{ source.name }}</a>    
-        </li>
-        {% else %}
-          <button>H</button>
-        {% endif %}
-      {% endfor %}
+   
+        {% for source in sources %} 
+          <li class="nav-item active">
+            <a class="nav-link" href="/source/{{source.id}}">{{ source.name }}</a>    
+          </li>
+        {% endfor %}
+
     </ul>
   </div>
 </nav>
