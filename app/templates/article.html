@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+
+<!-- Content block -->
+{% block content %}
+<div class="container">
+   {{ article_details.title }}
+   {% for article in article_details %}
+      {{article.title}}
+      {{article.content}}
+   {% endfor %}
+</div>
+{% endblock  %}
