@@ -1,10 +1,10 @@
 from flask import render_template,request,redirect,url_for
-from app import app
-from .models import Source, Article
-from .requests import get_sources, get_source, get_topheadlines
+from . import main
+from ..models import Source, Article
+from ..requests import get_sources, get_source, get_topheadlines
 
 # Views
-@app.route('/')
+@main.route('/')
 def index():
     '''
     View root page function that returns the index page and its data
@@ -20,7 +20,7 @@ def index():
     return render_template('index.html', title = title, sources = news_sources, trending=trending)
 
 
-@app.route('/source/<id>')
+@main.route('/source/<id>')
 def source(id):
     '''
     View source page function that returns the news_sourcesindex page and its data
@@ -33,7 +33,7 @@ def source(id):
     return render_template('source.html',sources = news_sources, source=source, source_details=source_details)
 
 
-@app.route('/404')
+@main.route('/404')
 def article():
     '''
     View source page function that returns the index page and its data
