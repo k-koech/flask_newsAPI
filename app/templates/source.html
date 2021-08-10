@@ -3,8 +3,7 @@
 <!-- Content block -->
 {% block content %}
 <div class="container">
-    <h2 class="m-2">Trending News</h2>
-    {% for article in trending %}
+    {% for article in source_details %}
     <div class="row articles">
         <div class="col col1">
             <img src="{{ article.image }}" class="img-fluid" alt="...">
@@ -13,6 +12,7 @@
             <h5><a  href="/source/article/{{ article.title }}">{{ article.title }}</a></h5>
             <p>{{ article.description }}</p>
             <p class="date">{{ article.date_published }}</p>
+            <!-- <p>{{ article.image }}</p> -->
             <a type="button" href="/source/article/{{ article.title }}" class="btn btn-secondary float-right">Read the article</a>
 
         </div>

@@ -1,0 +1,25 @@
+footer
+{
+    background-color: rgb(61, 61, 61);
+    color: white !important;
+    padding: 2em;
+}
+footer a
+{
+    text-decoration: none;
+    color: rgb(216, 216, 216);
+}
+footer .social-media a
+{
+   text-decoration: none;
+   color: white !important;
+   font-size: 1.2em ;
+   margin:1em;
+}
+footer .social-media 
+{
+}
+footer h5
+{
+    font-weight: 1000 !important;
+}

@@ -1,0 +1,25 @@
+.articles
+{
+    padding: 5px;
+    margin: 5px;
+    border:1px solid rgb(208, 208, 208);
+    border-radius: 5px;
+}
+.articles .col1
+{
+    height: 15em;
+    overflow: hidden;
+}
+
+.articles .col1 .img
+{
+    height: 100%;
+}
+.articles .col2
+{
+    padding-top: 10px;
+}
+.articles .col2 .date
+{
+    color: rgb(177, 177, 177);
+}

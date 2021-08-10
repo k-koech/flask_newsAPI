@@ -1,0 +1,16 @@
+.navbar-brand
+{
+   margin-right: 10em !important;
+}
+#navbarNav
+{
+    /* width: 10em;  */
+     /* overflow-x: hidden; */
+    white-space: nowrap;
+}
+#navbarNav a{
+    background-color: rgb(140, 140, 140) !important;
+    border-radius: 4px;
+    margin-right: 5px;
+    color: #fff;
+}
