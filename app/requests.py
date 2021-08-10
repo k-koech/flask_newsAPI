@@ -25,6 +25,37 @@ def get_topheadlines(search):
             article_data = process_articles_results(articles_results_list)    
     return article_data 
 
+# GET SOURCES
+def get_sources():
+    '''
+    Function that gets the json response to our url request
+    '''
+    get_source_url = base_url.format(api_key)
+
+    with urllib.request.urlopen(get_source_url) as url:
+        get_sources_data = url.read()
+        get_sources_response = json.loads(get_sources_data)
+        print(get_sources_response)
+        source_results = None
+
+        if get_sources_response['sources']:
+            source_results_list = get_sources_response['sources']
+            source_results =process_results(source_results_list)
+    return source_results
+
+def get_source(id):
+    get_source_details_url = source_url.format(id,api_key)
+
+    with urllib.request.urlopen(get_source_details_url) as url:
+        movie_details_data = url.read()
+        source_details_response = json.loads(movie_details_data)
+
+        source_object = None
+        if source_details_response['articles']:
+            articles_results_list = source_details_response['articles']
+            source_results = process_articles_results(articles_results_list)    
+    return source_results
+
 
 def get_article(id):
     """
