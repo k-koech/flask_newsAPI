@@ -16,6 +16,10 @@ def configure_request(app):
 
 # TOP HEADLINES
 def get_topheadlines(search):
+    '''
+    Function that gets the top headlines 
+    '''
+
     url = 'https://newsapi.org/v2/everything?q={}&apiKey={}' 
    
     get_article_details_url = url.format(search,api_key)
@@ -32,7 +36,7 @@ def get_topheadlines(search):
 # GET SOURCES
 def get_sources():
     '''
-    Function that gets the json response to our url request
+    Function that gets the json response  of the sources to our url request
     '''
     base_url = "https://newsapi.org/v2/top-headlines/sources?apiKey={}"
     get_sources_url = base_url.format(api_key)
@@ -49,6 +53,9 @@ def get_sources():
     return source_results
 
 def get_source(id):
+    '''
+    Function that gets the specific news source
+    '''
     get_source_details_url = source_url.format(id,api_key)
 
     with urllib.request.urlopen(get_source_details_url) as url:
@@ -64,7 +71,7 @@ def get_source(id):
 
 def get_article(id):
     """
-     Function to get a single article
+     Function to get a single articles
     """
     get_movie_details_url = base_url.format(id,api_key)
 
@@ -92,10 +99,10 @@ def process_articles_results(articles_list):
     Function  that processes the source result and transform them to a list of Objects
 
     Args:
-        articles_list: A list of dictionaries that contain movie details
+        articles_list: A list of dictionaries that contain articles details
 
     Returns :
-        source_results: A list of movie objects
+        source_results: A list of article objects
     '''
     articles_results = []
     for source_article in articles_list:
@@ -118,10 +125,10 @@ def process_results(source_list):
     Function  that processes the source result and transform them to a list of Objects
 
     Args:
-        source_list: A list of dictionaries that contain movie details
+        source_list: A list of dictionaries that contain source details
 
     Returns :
-        source_results: A list of movie objects
+        source_results: A list of source objects
     '''
     source_results = []
     for source_item in source_list:

@@ -1,7 +1,7 @@
 import unittest
 from app.models import Source
 
-class MovieTest(unittest.TestCase):
+class   SourceTest(unittest.TestCase):
     '''
     Test Class to test the behaviour of the Surce class
     '''
