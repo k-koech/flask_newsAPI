@@ -20,9 +20,9 @@
         </div>
        {% endfor %}
     </div>
-    <div class="col-md-4 othersources">
+    <div class="col-md-4 ">
         <h5 class="fw-bold color-white">Other News Sources</h5>
-        <ul class="list-group">
+        <ul class="list-group othersources">
         {% for source in sources %} 
              <a class="list-group-item" href="/source/{{source.id}}"><i class="fa fa-arrow-right" aria-hidden="true"></i>              {{ source.name }}</a> 
         {% endfor %}

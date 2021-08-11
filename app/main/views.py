@@ -12,7 +12,7 @@ def index():
     
     news_sources = get_sources()
 
-    search='tokyo'
+    search='kenya'
     trending = get_topheadlines(search)
 
     title = 'Home - News Sources'
