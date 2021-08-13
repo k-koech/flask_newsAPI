@@ -1,10 +1,12 @@
+from urllib.request import Request
 from flask import render_template,request,redirect,url_for
 from . import main
 from ..models import Source, Article
 from ..requests import get_sources, get_source, get_topheadlines
+from app import requests
 
 # Views
-@main.route('/')
+@main.route('/', methods=["POST", "GET"])
 def index():
     '''
     View root page function that returns the index page and its data
@@ -12,13 +14,21 @@ def index():
     
     news_sources = get_sources()
 
-    search='kenya'
-    trending = get_topheadlines(search)
-
+    
     title = 'Home - News Sources'
 
-    return render_template('index.html', title = title, sources = news_sources, trending=trending)
+    if request.method=="POST":
+        search = request.form['article_query']
+        search = search.replace(" ", '-');
+        trending = get_topheadlines(search)
+        return render_template('index.html', title = title, sources = news_sources, trending=trending)
+    else:
+        search='kenya'
+        trending = get_topheadlines(search)
+        return render_template('index.html', title = title, sources = news_sources, trending=trending)
 
+ 
+        
 
 @main.route('/source/<id>')
 def source(id):

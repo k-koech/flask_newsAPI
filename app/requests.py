@@ -44,7 +44,6 @@ def get_sources():
     with urllib.request.urlopen(get_sources_url) as url:
         get_sources_data = url.read()
         get_sources_response = json.loads(get_sources_data)
-        print(get_sources_response)
         source_results = None
 
         if get_sources_response['sources']:
