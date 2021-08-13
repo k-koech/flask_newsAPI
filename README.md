@@ -21,6 +21,9 @@ The application has no backend. Just frontend.
     - I would want to see the image, description and the time a news article was created.
     - I would want to click on an article and read the full article on the source website.
    
+## Live link
+Deployed project can be accessed here [News API](https://flask-newsapi.herokuapp.com/)   
+
 ## Known Bugs
     The application works perfectly well, no bugs.
 
