@@ -38,5 +38,5 @@ Deployed project can be accessed here [News API](https://flask-newsapi.herokuapp
     - phone :: +254725801772
 
 ### License
-*Licenced under the [MT-licence](https://github.com/k-koech/flask_newsAPI/blob/master/LICENSE.md)*
+*Licenced under the [MT-licence](https://github.com/k-koech/flask_newsAPI/blob/master/LICENCE.md)*
 Copyright (c) 2021 **Kelvin Kipchumba
